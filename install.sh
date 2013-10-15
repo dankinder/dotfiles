@@ -13,9 +13,10 @@ for dotfile in $(cd $repo_dir/src && find . -type f); do
     echo "Deleted symlink ~/$dotfile"
   elif [ -e ~/$dotfile ]; then
     # If it's a real file or directory, back it up
-    mv ~/$dotfile $repo_dir/backups
+    mv ~/$dotfile $repo_dir/backups/
     echo "Moved ~/$dotfile to $repo_dir/backups"
   fi
   ln -s $repo_dir/src/$dotfile ~/$dotfile
+  chmod 600 $repo_dir/src/$dotfile
   echo "Linked ~/$dotfile -> $repo_dir/src/$dotfile"
 done
