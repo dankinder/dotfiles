@@ -7,7 +7,7 @@ fi
 
 # A custom file for including stuff I don't want to commit to dotfiles
 if [ -f .bash_extras ]; then
-    . .bash_extras
+    . ~/.bash_extras
 fi
 
 # Environment Variables
