@@ -65,7 +65,7 @@ colorscheme koehler
 filetype plugin on
 set ofu=syntaxcomplete#Complete
 
-let g:notes_directories = ['/Volumes/Dan/notes']
+let g:notes_directories = ['~/notes']
 let g:notes_suffix = '.txt'
 
 if has("cscope")
