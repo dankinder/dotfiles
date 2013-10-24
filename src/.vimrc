@@ -65,6 +65,9 @@ colorscheme koehler
 filetype plugin on
 set ofu=syntaxcomplete#Complete
 
+let g:notes_directories = ['/Volumes/Dan/notes']
+let g:notes_suffix = '.txt'
+
 if has("cscope")
   " set csprg=/usr/local/bin/cscope
   set csto=0
