@@ -37,7 +37,7 @@ let sh_fold_enabled=1         " sh
 let vimsyn_folding='af'       " Vim script
 let xml_syntax_folding=1      " XML
  
-syn on " automatic syntax hilighting
+syntax on " automatic syntax hilighting
 
 autocmd BufRead,BufNewFile *.txt set filetype=text
 autocmd BufRead,BufNewFile *.txt set linebreak
