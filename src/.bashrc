@@ -6,8 +6,12 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # A custom file for including stuff I don't want to commit to dotfiles
-if [ -f .bash_extras ]; then
+if [ -f ~/.bash_extras ]; then
     . ~/.bash_extras
+fi
+
+if [ -f ~/.dotfiles/src/git-completion.bash ]; then
+    . ~/.dotfiles/src/git-completion.bash
 fi
 
 # Environment Variables
@@ -17,6 +21,8 @@ export INPUTRC=~/.inputrc
 export EDITOR=vim
 export PROMPT_COMMAND=""
 export PS1="\[\e[1;36m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]\$ "
+export GOPATH="$HOME/go"
+export PATH=$PATH:$GOPATH/bin
 
 alias ls="ls -h"
 alias ll="ls -al"
