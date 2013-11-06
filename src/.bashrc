@@ -10,8 +10,8 @@ if [ -f ~/.bash_extras ]; then
     . ~/.bash_extras
 fi
 
-if [ -f ~/.dotfiles/src/git-completion.bash ]; then
-    . ~/.dotfiles/src/git-completion.bash
+if [ -f ~/.git-completion.bash ]; then
+    . ~/.git-completion.bash
 fi
 
 # Environment Variables
