@@ -44,6 +44,10 @@ autocmd BufRead,BufNewFile *.txt set linebreak
 autocmd BufRead,BufNewFile *.txt set nonumber
 autocmd BufRead,BufNewFile *.txt set foldmethod=marker
 
+augroup filetype
+  au! BufRead,BufNewFile *.proto setfiletype proto
+augroup end
+
 " Playing around with highlighting Bible verses and notes
 "
 " autocmd BufRead,BufNewFile *.txt syntax match Function "\(Gen\(esis\)\?\|Exod\(us\)\?\|Lev\(iticus\)\?\|Num\(bers\)\?\|Deut\(eronomy\)\?\|Josh\(ua\)\?\|Judg\(es\)\?\|Ruth\|\(1\|I\)\(\s\)\?Sam\(uel\)\?\|\(2\|II\)\(\s\)\?Sam\(uel\)\?\|\(1\|I\)\(\s\)\?K\(in\)\?gs\|\(2\|II\)\(\s\)\?K\(in\)\?gs\|\(1\|I\)\(\s\)\?Chr\(o\)\?\(nicles\)\?\|\(2\|II\)\(\s\)\?Chr\(o\)\?\(nicles\)\?\|Ezra\|Neh\(emiah\)\?\|Esth\(er\)\?\|Job\|Ps\(a\)\?\(lm\)\?\|Prov\(erbs\)\?\|Ecc\(l\)\?\(esiastes\)\?\|Song\( of Solomon\)\?\|Isa\(iah\)\?\|Jer\(emiah\)\?\|Lam\(entations\)\?\|Ezek\(iel\)\?\|Dan\(iel\)\?\|Hos\(ea\)\?\|Joel\|Amos\|Obad\|Jonah\|Mic\(ah\)\?\|Nah\(um\)\?\|Hab\(akkuk\)\?\|Zeph\(aniah\)\?\|Hag\(gai\)\?\|Zech\(ariah\)\?\|Mal\(achi\)\?\|Matt\(hew\)\?\|Mark\|Luke\|\(\?<!\(1\|2\|3\|I\)\s\)\(\?<!\(1\|2\|3\|I\)\)John\|Acts\|Rom\(ans\)\?\|\(1\|I\)\(\s\)\?Cor\(inthians\)\?\|\(2\|II\)\(\s\)\?Cor\(inthians\)\?\|Gal\(atians\)\?\|Eph\(esians\)\?\|Phil\(ippians\)\?\|Col\(ossians\)\?\|\(1\|I\)\(\s\)\?Thess\(alonians\)\?\|\(2\|II\)\(\s\)\?Thess\(alonians\)\?\|\(1\|I\)\(\s\)\?Tim\(othy\)\?\|\(2\|II\)\(\s\)\?Tim\(othy\)\?\|Tit\(us\)\?\|Phile\(mon\)\?\|Heb\(rews\)\?\|Ja\(me\)\?s\|\(1\|I\)\(\s\)\?Pet\(er\)\?\|\(2\|II\)\(\s\)\?Pet\(er\)\?\|\(\(1\|I\)\(\s\)\?\)John\|\(\(2\|II\)\(\s\)\?\)John\|\(\(3\|III\)\(\s\)\?\)John\|Jude\|Rev\(elation\)\?\(\sof Jesus Christ\)\?\)\s*\d{1,3}\(\s*:\s*\d{1,3}\)\?\(\s*-\s*\d{1,3}\?\(\s*:\s*\)\?\(\d{1,3}\)\?\)\?"
