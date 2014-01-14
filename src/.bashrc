@@ -24,8 +24,8 @@ export PS1="\[\e[1;36m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0
 export GOPATH="$HOME/go"
 export PATH=$PATH:$GOPATH/bin
 
-alias ls="ls -h"
-alias ll="ls -al"
+alias ls="ls -h --color=auto"
+alias ll="ls -al --color=auto"
 alias st="svn st -q"
 alias du="du -h"
 alias df="df -h"
