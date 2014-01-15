@@ -53,7 +53,8 @@ map <C-K> <C-W>k<C-W>_
 map <C-H> <C-W>_
 set wmh=0
 
-colorscheme koehler
+set background=dark
+colorscheme solarized
 filetype plugin on
 set ofu=syntaxcomplete#Complete
 

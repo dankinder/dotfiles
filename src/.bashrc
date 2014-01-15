@@ -14,6 +14,10 @@ if [ -f ~/.git-completion.bash ]; then
     . ~/.git-completion.bash
 fi
 
+unamestr=$(uname)
+if [[ "$unamestr" == "Linux" ]]; then platform="linux"; fi
+if [[ "$unamestr" == "Darwin" ]]; then platform="mac"; fi
+
 # Environment Variables
 #
 
@@ -24,8 +28,15 @@ export PS1="\[\e[1;36m\]\u\[\e[0m\]@\[\e[1;32m\]\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0
 export GOPATH="$HOME/go"
 export PATH=$PATH:$GOPATH/bin
 
-alias ls="ls -h --color=auto"
-alias ll="ls -al --color=auto"
+if [[ $platform == "linux" ]]; then
+  alias ls="ls -h --color=auto"
+  alias ll="ls -al --color=auto"
+elif [[ $platform == "mac" ]]; then
+  export CLICOLOR=1
+  alias ls="ls -h"
+  alias ll="ls -al"
+fi
+
 alias st="svn st -q"
 alias du="du -h"
 alias df="df -h"
