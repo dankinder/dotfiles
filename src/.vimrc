@@ -24,6 +24,7 @@ set showmatch
 set guioptions-=T
 set so=2  " keep at least 2 lines of space around the cursor
 set laststatus=2 " always show the status bar
+set winminheight=0 " Allow split windows to go to 0 height
 
 set foldmethod=syntax
 set foldnestmax=1
@@ -48,10 +49,14 @@ autocmd BufRead,BufNewFile *.txt set foldmethod=marker
 autocmd Filetype python set tabstop=4
 autocmd Filetype python set shiftwidth=4
 
+" Multi-file method 1: tabs
+map <C-H> :tabNext<CR>
+map <C-L> :tabnext<CR>
+
+" Mult-file method 2: splits
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
-map <C-H> <C-W>_
-set wmh=0
+"map <C-H> <C-W>_
 
 set background=dark
 colorscheme solarized
