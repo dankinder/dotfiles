@@ -1,3 +1,4 @@
 vbell_msg ""
 caption always "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
 shelltitle "$ |bash"
+term screen-256color
