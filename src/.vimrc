@@ -1,8 +1,8 @@
 set nocompatible  " enable vim specific commands
 
-set noeb " disable error bells
-set vb t_vb= " disable the error bells, for real guys
-set novb " don't blink the screen when there is an error
+set noerrorbells " disable error bells
+set visualbell " disable error bells
+set t_vb= " disable the error bells, for real guys
 set backspace=indent,eol,start  " backspacing over indention, end-of-line and start-of-line
 set autoindent
 set smartindent
