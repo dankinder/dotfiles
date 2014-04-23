@@ -4,9 +4,8 @@ set noerrorbells " disable error bells
 set visualbell " disable error bells
 set t_vb= " disable the error bells, for real guys
 set backspace=indent,eol,start  " backspacing over indention, end-of-line and start-of-line
-set autoindent
-set smartindent
 
+set autoindent " standard indent behavior for non-recognized filetypes
 set nu  " set line numbering on
 set fileformat=unix  " use the unix fileformat
 set history=50 " keep 50 lines of command line history
@@ -25,6 +24,8 @@ set guioptions-=T
 set so=2  " keep at least 2 lines of space around the cursor
 set laststatus=2 " always show the status bar
 set winminheight=0 " Allow split windows to go to 0 height
+set wildmenu " better command-line completion
+set cmdheight=2 " command window height; avoids 'press <Enter> to continue' sometimes
 
 set foldmethod=syntax
 set foldnestmax=1
@@ -40,6 +41,7 @@ let vimsyn_folding='af'       " Vim script
 let xml_syntax_folding=1      " XML
  
 syntax on " automatic syntax hilighting
+filetype indent plugin on " try to automatically figure indenting out
 
 autocmd BufRead,BufNewFile *.txt set filetype=text
 autocmd BufRead,BufNewFile *.txt set linebreak
@@ -48,6 +50,10 @@ autocmd BufRead,BufNewFile *.txt set foldmethod=marker
 
 autocmd Filetype python set tabstop=4
 autocmd Filetype python set shiftwidth=4
+autocmd Filetype cs set tabstop=4
+autocmd Filetype cs set shiftwidth=4
+autocmd Filetype aspx set tabstop=4
+autocmd Filetype aspx set shiftwidth=4
 
 " Multi-file method 1: tabs
 map <C-H> :tabNext<CR>
