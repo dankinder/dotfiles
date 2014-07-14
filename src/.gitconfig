@@ -11,6 +11,7 @@
         ui = auto
 [core]
         trustctime = false
+	excludesfile = ~/.cvsignore
 [diff]
         mnemonicprefix = true
 [alias]

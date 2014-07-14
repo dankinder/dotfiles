@@ -16,7 +16,7 @@ set incsearch " show partial searches real-time
 set magic " enable advanced regular expression in searches
 set shiftwidth=2 " number of spaces used with (auto)indention
 set expandtab
-set tabstop=8 " tab size
+set tabstop=4 " tab size
 set smarttab
 set shiftround
 set showmatch
@@ -50,6 +50,7 @@ autocmd BufRead,BufNewFile *.txt set foldmethod=marker
 
 autocmd Filetype python set tabstop=4
 autocmd Filetype python set shiftwidth=4
+autocmd Filetype python set foldmethod=indent
 autocmd Filetype cs set tabstop=4
 autocmd Filetype cs set shiftwidth=4
 autocmd Filetype aspx set tabstop=4
@@ -88,3 +89,5 @@ if has("cscope")
 endif
 map g<C-]> :cs find g <C-R>=expand("<cword>")<CR><CR>
 map g<C-\> :cs find s <C-R>=expand("<cword>")<CR><CR>
+
+execute pathogen#infect()
