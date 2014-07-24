@@ -55,6 +55,10 @@ autocmd Filetype cs set tabstop=4
 autocmd Filetype cs set shiftwidth=4
 autocmd Filetype aspx set tabstop=4
 autocmd Filetype aspx set shiftwidth=4
+autocmd Filetype go set tabstop=4
+autocmd Filetype go set shiftwidth=4
+autocmd Filetype go set foldmethod=indent
+autocmd Filetype go set noexpandtab
 
 " Multi-file method 1: tabs
 map <C-H> :tabNext<CR>
