@@ -51,14 +51,18 @@ autocmd BufRead,BufNewFile *.txt set foldmethod=marker
 autocmd Filetype python set tabstop=4
 autocmd Filetype python set shiftwidth=4
 autocmd Filetype python set foldmethod=indent
+autocmd Filetype python set colorcolumn=121
 autocmd Filetype cs set tabstop=4
 autocmd Filetype cs set shiftwidth=4
+autocmd Filetype cs set colorcolumn=121
 autocmd Filetype aspx set tabstop=4
 autocmd Filetype aspx set shiftwidth=4
+autocmd Filetype aspx set colorcolumn=121
 autocmd Filetype go set tabstop=4
 autocmd Filetype go set shiftwidth=4
 autocmd Filetype go set foldmethod=indent
 autocmd Filetype go set noexpandtab
+autocmd Filetype go set colorcolumn=121
 
 " Multi-file method 1: tabs
 map <C-H> :tabNext<CR>
