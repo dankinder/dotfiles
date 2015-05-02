@@ -73,6 +73,8 @@ map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
 "map <C-H> <C-W>_
 
+nmap <F8> :TagbarToggle<CR>
+
 set background=dark
 colorscheme solarized
 filetype plugin on
