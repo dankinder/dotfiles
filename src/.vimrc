@@ -80,6 +80,8 @@ colorscheme solarized
 filetype plugin on
 set ofu=syntaxcomplete#Complete
 
+let g:go_fmt_command = "goimports"
+
 let g:notes_directories = ['~/notes']
 let g:notes_suffix = '.txt'
 
