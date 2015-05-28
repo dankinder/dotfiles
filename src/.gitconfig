@@ -26,3 +26,5 @@
         singlekey = true
 [push]
         default = current
+[url "git@ghe.iparadigms.com:"]
+	insteadOf = https://ghe.iparadigms.com/

@@ -75,6 +75,9 @@ map <C-K> <C-W>k<C-W>_
 
 nmap <F8> :TagbarToggle<CR>
 
+if !has("gui_running")
+  let g:solarized_termtrans=1
+endif
 set background=dark
 colorscheme solarized
 filetype plugin on
