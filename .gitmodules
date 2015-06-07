@@ -7,3 +7,6 @@
 [submodule "src/.vim/bundle/ctrlp.vim"]
 	path = src/.vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "src/.vim/bundle/vim-scala"]
+	path = src/.vim/bundle/vim-scala
+	url = https://github.com/derekwyatt/vim-scala
