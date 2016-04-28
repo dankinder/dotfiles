@@ -64,6 +64,27 @@ autocmd Filetype go set foldmethod=indent
 autocmd Filetype go set noexpandtab
 autocmd Filetype go set colorcolumn=121
 
+" vim-go setup
+" Disable whitespace highlighting
+let g:go_highlight_space_tab_error = 0
+let g:go_highlight_trailing_whitespace_error = 0
+" Enable syntax highlighting
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_build_constraints = 1
+"if has('autocmd')
+"    augroup golang
+"        autocmd!
+"        autocmd BufWritePost,FileWritePost *.go execute 'GoLint' | cwindow
+"        " This trigger takes advantage of the fact that the quickfix window can be
+"        " easily distinguished by its file-type, qf. The wincmd J command is
+"        " equivalent to the Ctrl+W, Shift+J shortcut telling Vim to move a window to
+"        " the very bottom (see :help :wincmd and :help ^WJ).
+"        autocmd FileType qf wincmd J
+"    augroup END
+"endif
+
 " Multi-file method 1: tabs
 map <C-H> :tabNext<CR>
 map <C-L> :tabnext<CR>
