@@ -26,6 +26,7 @@ set laststatus=2 " always show the status bar
 set winminheight=0 " Allow split windows to go to 0 height
 set wildmenu " better command-line completion
 set cmdheight=2 " command window height; avoids 'press <Enter> to continue' sometimes
+set textwidth=120
 
 set foldmethod=syntax
 set foldnestmax=1
