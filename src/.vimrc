@@ -64,6 +64,7 @@ autocmd Filetype go set shiftwidth=4
 autocmd Filetype go set foldmethod=indent
 autocmd Filetype go set noexpandtab
 autocmd Filetype go set colorcolumn=121
+autocmd Filetype go inoremap <C-n> <C-x><C-o>
 
 " vim-go setup
 " Disable whitespace highlighting
