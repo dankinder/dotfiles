@@ -44,6 +44,10 @@ let xml_syntax_folding=1      " XML
 syntax on " automatic syntax hilighting
 filetype indent plugin on " try to automatically figure indenting out
 
+let g:syntastic_javascript_checkers = ['standard']
+autocmd bufwritepost *.js silent !standard-format -w %
+set autoread
+
 autocmd BufRead,BufNewFile *.txt set filetype=text
 autocmd BufRead,BufNewFile *.txt set linebreak
 autocmd BufRead,BufNewFile *.txt set nonumber
