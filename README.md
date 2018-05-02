@@ -7,4 +7,3 @@ git clone git@github.com:dankinder/dotfiles.git
 dotfiles/install.sh
 ```
 
-
