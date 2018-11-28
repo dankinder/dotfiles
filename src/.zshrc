@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="dieter"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -70,29 +70,39 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export INPUTRC=~/.inputrc
+export EDITOR=vim
+export PROMPT_COMMAND=""
+export GOPATH="$HOME/go"
+export PATH=$PATH:$GOPATH/bin
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+alias st="svn st -q"
+alias du="du -h"
+alias df="df -h"
+alias bc="bc -l"
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+set -o vi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
+# Nifty functions
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Grab column N from stdin, ex. `ps aux | cl 2` => Just Process IDs
+function cl() {
+    awk "{print \$$1}"
+}
+
+function psx () {
+    if [ -n "$1" ]; then
+        ps aux | grep -v "grep" | grep -i "$1"
+    else
+        ps aux
+    fi
+}
+
+# A custom file for including stuff I don't want to commit to dotfiles
+if [ -f ~/.bash_extras ]; then
+    . ~/.bash_extras
+fi

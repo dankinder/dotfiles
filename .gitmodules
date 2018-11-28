@@ -10,3 +10,6 @@
 [submodule "src/.vim/bundle/vim-scala"]
 	path = src/.vim/bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala
+[submodule "src/.oh-my-zsh"]
+	path = src/.oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh
