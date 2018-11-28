@@ -111,6 +111,7 @@ filetype plugin on
 set ofu=syntaxcomplete#Complete
 
 let g:go_fmt_command = "goimports"
+let g:go_version_warning = 0
 
 let g:notes_directories = ['~/notes']
 let g:notes_suffix = '.txt'
