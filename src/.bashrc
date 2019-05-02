@@ -65,5 +65,4 @@ function psx () {
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-export GOPATH=/home/dkinder/go
 export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
