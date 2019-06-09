@@ -69,6 +69,7 @@ autocmd Filetype go set foldmethod=indent
 autocmd Filetype go set noexpandtab
 autocmd Filetype go set colorcolumn=121
 autocmd Filetype go inoremap <C-n> <C-x><C-o>
+autocmd Filetype gitcommit set textwidth=72
 
 " vim-go setup
 " Disable whitespace highlighting
