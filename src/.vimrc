@@ -32,6 +32,12 @@ set foldmethod=syntax
 set foldnestmax=1
 set foldlevelstart=1
 
+" Configuration for netrw, file listing
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split=3
+let g:netrw_altv = 1
+
 let javaScript_fold=1         " JavaScript
 let perl_fold=1               " Perl
 let php_folding=1             " PHP
