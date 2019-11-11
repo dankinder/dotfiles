@@ -21,6 +21,7 @@ for dotfile in $(cd $repo_dir/src && find . -type f | cut -c 3-); do
     echo "Moved ~/$dotfile to $repo_dir/backups"
   fi
   ln -s $repo_dir/src/$dotfile ~/$dotfile
-  chmod 600 $repo_dir/src/$dotfile
   echo "Linked ~/$dotfile -> $repo_dir/src/$dotfile"
 done
+
+chmod 600 $repo_dir/src/.ssh/config
